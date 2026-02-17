@@ -24,10 +24,11 @@
   }
 
   .flip-wrapper {
-    width: 430px; /* smaller */
+    width: 430px;
     max-width: 95%;
     perspective: 1500px;
     cursor: pointer;
+    transform: translateY(-20px); /* MOVE CARD 20px UP */
   }
 
   .flip-card {
@@ -46,9 +47,9 @@
     position: absolute;
     backface-visibility: hidden;
     background: #f4f4f4;
-    padding: 14px; /* even smaller padding */
+    padding: 18px; /* slightly bigger */
     border-radius: 12px;
-    min-height: 250px; /* VERY compact height */
+    min-height: 260px; /* slight increase */
     top: 0;
     left: 0;
   }
@@ -65,87 +66,86 @@
 
   .name {
     color: #e41e26;
-    font-size: 17px;
+    font-size: 22px; /* +5px */
   }
 
   .designation {
     color: #333;
-    font-size: 11px;
-    margin-top: 3px;
+    font-size: 16px; /* +4px */
+    margin-top: 4px;
   }
 
   .contact {
     text-align: right;
-    font-size: 11px;
-    line-height: 1.2;
+    font-size: 15px; /* increased */
+    line-height: 1.3;
   }
 
   .logo-section {
     text-align: center;
-    margin: 14px 0 6px; /* tightened spacing */
+    margin: 22px 0 10px;
   }
 
   .logo {
-    font-size: 32px; /* smaller */
+    font-size: 42px; /* increased */
     color: #e41e26;
   }
 
   .sub-logo {
-    font-size: 12px;
-    margin-top: 2px;
+    font-size: 17px; /* increased */
+    margin-top: 3px;
   }
 
   .website {
-    font-size: 12px;
-    margin-top: 4px;
+    font-size: 16px; /* increased */
+    margin-top: 5px;
   }
 
-  /* ⭐ MOVE THIS LOWER WITHOUT MAKING CARD TALLER */
   .services {
-    margin-top: 12px;
+    margin-top: 16px; /* good spacing */
     text-align: center;
-    font-size: 11px;
+    font-size: 15px; /* increased */
   }
 
   /* BACK */
   .corporate-title {
     text-align: center;
-    font-size: 11px;
-    margin-bottom: 4px;
+    font-size: 15px;
+    margin-bottom: 6px;
   }
 
   .company-name {
     text-align: center;
-    font-size: 15px;
+    font-size: 20px; /* bigger */
     margin-bottom: 8px;
     color: #e41e26;
   }
 
   .address {
     text-align: center;
-    font-size: 11px;
-    line-height: 1.2;
-    margin-bottom: 8px;
+    font-size: 15px;
+    line-height: 1.3;
+    margin-bottom: 10px;
   }
 
   .locations {
     text-align: center;
-    font-size: 11px;
-    margin-bottom: 8px;
+    font-size: 15px;
+    margin-bottom: 12px;
   }
 
   .inika {
     text-align: center;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
   }
 
   .inika img {
-    height: 45px; /* much smaller to fit card */
+    height: 55px; /* slightly bigger */
   }
 
   .inika-link {
     text-align: center;
-    font-size: 12px;
+    font-size: 16px; /* bigger */
   }
 </style>
 
