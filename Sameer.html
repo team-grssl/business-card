@@ -23,11 +23,13 @@
     overflow: hidden;
   }
 
+  /* CENTERING FIX */
   .flip-wrapper {
-    width: 460px; /* smaller */
+    width: 460px;
     max-width: 95%;
     perspective: 1500px;
     cursor: pointer;
+    transform: translateY(8px); /* MOVES CARD SLIGHTLY DOWN → PERFECT CENTER */
   }
 
   .flip-card {
@@ -46,9 +48,9 @@
     position: absolute;
     backface-visibility: hidden;
     background: #f4f4f4;
-    padding: 16px; /* reduced */
+    padding: 20px; /* EVEN padding */
     border-radius: 12px;
-    min-height: 280px; /* reduced */
+    min-height: 295px; /* BALANCED HEIGHT */
     top: 0;
     left: 0;
   }
@@ -71,7 +73,7 @@
   .designation {
     color: #333;
     font-size: 12px;
-    margin-top: 3px;
+    margin-top: 4px;
   }
 
   .contact {
@@ -82,41 +84,45 @@
 
   .logo-section {
     text-align: center;
-    margin: 18px 0 8px; /* smaller */
+    margin: 22px 0 10px;
   }
 
   .logo {
-    font-size: 36px;
+    font-size: 38px;
     color: #e41e26;
   }
 
   .sub-logo {
-    font-size: 13px;
+    font-size: 14px;
     margin-top: 2px;
+    color: #1d2b53;
   }
 
   .website {
-    font-size: 13px;
-    margin-top: 4px;
+    font-size: 14px;
+    margin-top: 5px;
   }
 
+  /* ⭐ FIXED — MOVED THIS LOWER */
   .services {
-    margin-top: 14px; /* FIXED SPACING — added more space */
+    margin-top: 18px; /* previously 14px → now visually perfect */
     text-align: center;
     font-size: 12px;
+    color: #333;
   }
 
   /* BACK */
   .corporate-title {
     text-align: center;
     font-size: 12px;
-    margin-bottom: 4px;
+    margin-bottom: 5px;
   }
 
   .company-name {
     text-align: center;
     font-size: 16px;
     margin-bottom: 8px;
+    color: #e41e26;
   }
 
   .address {
@@ -134,16 +140,17 @@
 
   .inika {
     text-align: center;
-    margin-bottom: 5px;
+    margin-bottom: 6px;
   }
 
   .inika img {
-    height: 60px; /* smaller so entire card fits screen */
+    height: 60px;
   }
 
   .inika-link {
     text-align: center;
     font-size: 13px;
+    color: #e41e26;
   }
 </style>
 
