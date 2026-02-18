@@ -89,12 +89,14 @@
     font-size: 15px;
   }
 
+  /* REMOVE BOLD ONLY FOR PHONE + EMAIL */
   .phone a,
   .email a {
     color: #000 !important;
     text-decoration: none !important;
     display: inline-block;
     padding: 3px 0;
+    font-weight: normal !important;   /* <<< FIXED */
   }
 
   .logo-section {
@@ -229,22 +231,4 @@
         </div>
 
         <div class="inika-link">
-          <a href="https://www.inikaresorts.com" target="_blank">
-            www.inikaresorts.com
-          </a>
-        </div>
-
-      </div>
-
-    </div>
-  </div>
-
-  <script>
-    function flipCard() {
-      document.getElementById("flipCard").classList.toggle("flipped");
-    }
-  </script>
-
-</body>
-</html>
-
+          <a href="https://www
