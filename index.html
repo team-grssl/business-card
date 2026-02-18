@@ -23,6 +23,17 @@
     overflow: hidden;
   }
 
+  a {
+    text-decoration: none;
+    color: black;  /* Default link color is BLACK */
+  }
+
+  /* EXCEPT these two links will be RED */
+  .website a,
+  .inika-link a {
+    color: #e41e26 !important;
+  }
+
   .flip-wrapper {
     width: 430px;
     max-width: 95%;
@@ -58,12 +69,6 @@
     transform: rotateY(180deg);
   }
 
-  /* MAKE ALL LINKS BLACK + NO UNDERLINE */
-  a {
-    color: #000 !important;
-    text-decoration: none !important;
-  }
-
   /* FRONT */
   .top-section {
     display: flex;
@@ -72,13 +77,13 @@
 
   .name {
     color: #e41e26;
-    font-size: 22px;
+    font-size: 22px; /* increased */
   }
 
   .designation {
     color: #333;
-    font-size: 15px;
-    margin-top: 4px;
+    font-size: 15px; /* increased */
+    margin-top: 3px;
   }
 
   .contact {
@@ -98,8 +103,8 @@
   }
 
   .sub-logo {
-    font-size: 13px;
-    margin-top: 2px;
+    font-size: 13px; /* reduced */
+    margin-top: 3px;
   }
 
   .website {
@@ -181,6 +186,7 @@
         <div class="logo-section">
           <div class="logo">grassroots</div>
           <div class="sub-logo">Solutions & Services Pvt. Ltd.</div>
+
           <div class="website">
             <a href="https://www.grssl.com" target="_blank">www.grssl.com</a>
           </div>
