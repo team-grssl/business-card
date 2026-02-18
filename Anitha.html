@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Anitha M - Business Card</title>
+  <title>Abhijeet Paul - Business Card</title>
 
 <style>
   * {
@@ -23,14 +23,16 @@
     overflow: hidden;
   }
 
+  /* Flip Wrapper */
   .flip-wrapper {
     width: 430px;
     max-width: 95%;
     perspective: 1500px;
     cursor: pointer;
-    transform: translateY(-130px); /* MOVE CARD UP 130px */
+    transform: translateY(-130px);
   }
 
+  /* Flip Card */
   .flip-card {
     width: 100%;
     position: relative;
@@ -42,6 +44,7 @@
     transform: rotateY(180deg);
   }
 
+  /* Card sides */
   .side {
     width: 100%;
     position: absolute;
@@ -58,28 +61,54 @@
     transform: rotateY(180deg);
   }
 
-  /* FRONT */
+  /* FRONT SECTION */
   .top-section {
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
 
-  /* ⭐ THESE FOUR ARE NOW BACK TO ORIGINAL SIZES */
+  .left-side {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  .right-side {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
   .name {
     color: #e41e26;
-    font-size: 17px; /* reverted smaller */
+    font-size: 22px;
   }
 
+  /* Designation NOT bold */
   .designation {
     color: #333;
-    font-size: 12px; /* reverted */
-    margin-top: 3px;
+    font-size: 15px;
+    font-weight: normal !important;
   }
 
-  .contact {
-    text-align: right;
-    font-size: 12px; /* reverted */
-    line-height: 1.2;
+  /* Phone + Email (NOT bold, smaller) */
+  .phone a,
+  .email a {
+    color: #000 !important;
+    text-decoration: none !important;
+    display: inline-block;
+    padding: 3px 0;
+    font-weight: normal !important;
+    font-size: 13px;
+  }
+
+  /* GRSSL link RED */
+  .website a {
+    font-size: 16px;
+    color: #e41e26 !important;
+    text-decoration: none !important;
   }
 
   .logo-section {
@@ -88,26 +117,24 @@
   }
 
   .logo {
-    font-size: 42px; /* stays larger */
+    font-size: 42px;
     color: #e41e26;
   }
 
   .sub-logo {
-    font-size: 17px;
-    margin-top: 3px;
+    font-size: 13px;
+    margin-top: 2px;
   }
 
-  .website {
-    font-size: 16px;
-    margin-top: 5px;
+  .services {
+    margin-top: 28px;
+    text-align: center;
+    font-size: 15px;
   }
-.services {
-  margin-top: 28px;  /* pushes it DOWN */
-  text-align: center;
-  font-size: 15px;
-}
 
-  /* BACK */
+  /* BACK SECTION */
+
+  /* Corporate title stays bold */
   .corporate-title {
     text-align: center;
     font-size: 15px;
@@ -121,17 +148,21 @@
     color: #e41e26;
   }
 
+  /* Address NOT bold + reduced */
   .address {
     text-align: center;
-    font-size: 15px;
+    font-size: 13px;
     line-height: 1.3;
     margin-bottom: 10px;
+    font-weight: normal !important;
   }
 
+  /* Locations NOT bold + reduced */
   .locations {
     text-align: center;
-    font-size: 15px;
+    font-size: 13px;
     margin-bottom: 12px;
+    font-weight: normal !important;
   }
 
   .inika {
@@ -139,43 +170,50 @@
     margin-bottom: 8px;
   }
 
+  /* Inika logo bigger */
   .inika img {
-    height: 55px;
+    height: 70px;
   }
 
+  /* Inika link RED + CENTERED */
   .inika-link {
     text-align: center;
+    width: 100%;
+  }
+
+  .inika-link a {
+    color: #e41e26 !important;
+    text-decoration: none !important;
     font-size: 16px;
   }
 </style>
-
 
 </head>
 
 <body>
 
   <div class="flip-wrapper" onclick="flipCard()">
-
     <div class="flip-card" id="flipCard">
 
-      <!-- FRONT -->
+      <!-- FRONT SIDE -->
       <div class="side front">
 
         <div class="top-section">
-          <div>
-            <div class="name">Anitha M</div>
-            <div class="designation">Deputy General Managar - Sales & Business Development</div>
+          <div class="left-side">
+            <div class="name">Abhijeet Paul</div>
+            <div class="designation">Head - CRM & AI Automation</div>
           </div>
 
-          <div class="contact">
-            <div><a href="tel:+919844261320">+91-9844261320</a></div>
-            <div><a href="mailto:anitha@grssl.com">anitha@grssl.com</a></div>
+          <div class="right-side">
+            <div class="phone"><a href="tel:+919071091800">+91-9071091800</a></div>
+            <div class="email"><a href="mailto:abhijeet@grssl.com">abhijeet@grssl.com</a></div>
           </div>
         </div>
 
         <div class="logo-section">
           <div class="logo">grassroots</div>
           <div class="sub-logo">Solutions & Services Pvt. Ltd.</div>
+
           <div class="website">
             <a href="https://www.grssl.com" target="_blank">www.grssl.com</a>
           </div>
@@ -187,7 +225,7 @@
 
       </div>
 
-      <!-- BACK -->
+      <!-- BACK SIDE -->
       <div class="side back">
 
         <div class="corporate-title">Corporate office</div>
