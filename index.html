@@ -28,7 +28,7 @@
     max-width: 95%;
     perspective: 1500px;
     cursor: pointer;
-    transform: translateY(-130px); /* MOVE CARD UP 130px */
+    transform: translateY(-130px);
   }
 
   .flip-card {
@@ -58,21 +58,26 @@
     transform: rotateY(180deg);
   }
 
+  /* MAKE ALL LINKS BLACK + NO UNDERLINE */
+  a {
+    color: #000 !important;
+    text-decoration: none !important;
+  }
+
   /* FRONT */
   .top-section {
     display: flex;
     justify-content: space-between;
   }
 
-  /* UPDATED FONT SIZES */
   .name {
     color: #e41e26;
-    font-size: 22px;  /* increased */
+    font-size: 22px;
   }
 
   .designation {
     color: #333;
-    font-size: 15px;  /* increased */
+    font-size: 15px;
     margin-top: 4px;
   }
 
@@ -88,13 +93,12 @@
   }
 
   .logo {
-    font-size: 42px; /* stays larger */
+    font-size: 42px;
     color: #e41e26;
   }
 
-  /* UPDATED — REDUCED SIZE */
   .sub-logo {
-    font-size: 13px;   /* reduced */
+    font-size: 13px;
     margin-top: 2px;
   }
 
