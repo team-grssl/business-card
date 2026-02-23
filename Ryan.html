@@ -1,149 +1,265 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Business Card - Anitha</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anitha - Business Card</title>
+  <link rel="canonical" href="https://ryan0304-coder.github.io/business-card/Anitha.html">
 
 <style>
-    body {
-        font-family: Arial, sans-serif;
-        background: #f3f3f3;
-        margin: 0;
-        padding: 20px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+  }
 
-    /* CARD LAYOUT */
-    .card {
-        width: 100%;
-        max-width: 360px;
-        background: white;
-        border-radius: 14px;
-        box-shadow: 0px 4px 10px rgba(0,0,0,0.15);
-        overflow: hidden;
-        margin-bottom: 25px;
-    }
+  body {
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+  }
 
-    /* FRONT STYLING */
-    .front {
-        padding: 20px;
-    }
+  .flip-wrapper {
+    width: 430px;
+    max-width: 95%;
+    perspective: 1500px;
+    cursor: pointer;
+    transform: translateY(-130px);
+  }
 
-    .profile-img {
-        width: 110px;
-        height: 110px;
-        border-radius: 50%;
-        object-fit: cover;
-        margin: auto;
-        display: block;
-    }
+  .flip-card {
+    width: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.8s ease-in-out;
+  }
 
-    .name {
-        text-align: center;
-        font-size: clamp(18px, 6vw, 26px);
-        font-weight: bold;
-        margin-top: 12px;
-    }
+  .flip-card.flipped {
+    transform: rotateY(180deg);
+  }
 
-    .designation {
-        text-align: center;
-        font-size: clamp(13px, 4vw, 17px);
-        margin-top: 4px;
-        font-weight: normal;
-    }
+  .side {
+    width: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    background: #f4f4f4;
+    padding: 18px;
+    border-radius: 12px;
+    min-height: 260px;
+    top: 0;
+    left: 0;
+  }
 
-    .details {
-        margin-top: 18px;
-        font-size: clamp(12px, 3.8vw, 16px);
-    }
+  .back {
+    transform: rotateY(180deg);
+  }
 
-    .details p {
-        margin: 6px 0;
-    }
+  .top-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-    .link {
-        color: black !important;
-        font-weight: normal;
-        text-decoration: none;
-        word-break: break-word;
-    }
+  .left-side {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
 
-    /* BACK SIDE */
-    .backside {
-        padding: 20px;
-        background: white;
-    }
+  .right-side {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
 
-    .back-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 10px;
-    }
+  .name {
+    color: #e41e26;
+    font-size: 22px;
+  }
 
-    .brand-box {
-        flex: 1;
-        text-align: center;
-    }
+  .designation {
+    color: #333;
+    font-size: 15px;
+    font-weight: normal !important;
+  }
 
-    .brand-logo {
-        width: 100%;
-        max-width: 120px;
-        height: auto;
-        object-fit: contain;
-        margin-bottom: 6px;
-    }
+  .phone a,
+  .email a {
+    color: #000 !important;
+    text-decoration: none !important;
+    display: inline-block;
+    padding: 3px 0;
+    font-weight: normal !important;
+    font-size: 13px;
+  }
 
-    .brand-link {
-        text-decoration: none;
-        color: black;
-        font-size: clamp(10px, 2.8vw, 15px);
-        word-break: break-word;
-    }
+  .logo-section {
+    text-align: center;
+    margin: 22px 0 10px;
+  }
+
+  .logo {
+    font-size: 42px;
+    color: #e41e26;
+  }
+
+  .sub-logo {
+    font-size: 13px;
+    margin-top: 2px;
+  }
+
+  .website a {
+    color: #e41e26 !important;
+    text-decoration: none !important;
+    font-size: 15px;
+  }
+
+  .services {
+    margin-top: 28px;
+    text-align: center;
+    font-size: 15px;
+  }
+
+
+  /* BACKSIDE LAYOUT — UPDATED */
+  .brand-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 18px;
+  }
+
+  .brand-box {
+    width: 48%;
+    text-align: center;
+  }
+
+  .brand-box img {
+    width: 100%;
+    max-width: 120px;
+    height: auto;
+    border-radius: 6px;
+  }
+
+  .brand-box a {
+    display: block;
+    margin-top: 6px;
+    font-size: 13px;
+    color: #e41e26 !important;
+    text-decoration: none !important;
+    word-break: break-word;
+  }
+
+  .corporate-title {
+    text-align: center;
+    font-size: 15px;
+    margin-bottom: 6px;
+  }
+
+  .company-name {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 8px;
+    color: #e41e26;
+  }
+
+  .address,
+  .locations {
+    text-align: center;
+    font-size: 13px;
+    font-weight: normal !important;
+    line-height: 1.3;
+    margin-bottom: 8px;
+  }
+
 </style>
+
 </head>
+
 <body>
 
-<!-- FRONT SIDE -->
-<div class="card">
-    <div class="front">
-        <img src="Anitha.png" class="profile-img">
+  <div class="flip-wrapper" onclick="flipCard()">
+    <div class="flip-card" id="flipCard">
 
-        <div class="name">Anitha</div>
-        <div class="designation">Business Development Executive</div>
+      <!-- FRONT SIDE -->
+      <div class="side front">
 
-        <div class="details">
-            <p><strong>Phone:</strong> <a class="link" href="tel:+91 0000000000">+91 00000 00000</a></p>
-            <p><strong>Email:</strong> <a class="link" href="mailto:anitha@gmail.com">anitha@gmail.com</a></p>
-            <p><strong>Website:</strong> <a class="link" href="https://www.grssl.com">www.grssl.com</a></p>
+        <div class="top-section">
+          <div class="left-side">
+            <div class="name">Anitha</div>
+            <div class="designation">Business Development Executive</div>
+          </div>
+
+          <div class="right-side">
+            <div class="phone"><a href="#">+91 00000 00000</a></div>
+            <div class="email"><a href="#">anitha@gmail.com</a></div>
+          </div>
         </div>
-    </div>
-</div>
 
-<!-- BACK SIDE -->
-<div class="card">
-    <div class="backside">
-        <div class="back-container">
+        <div class="logo-section">
+          <div class="logo">grassroots</div>
+          <div class="sub-logo">Solutions & Services Pvt. Ltd.</div>
 
-            <!-- INIKA LEFT -->
-            <div class="brand-box">
-                <img src="Inika.png" class="brand-logo">
-                <a href="https://www.inikaresorts.com" class="brand-link">www.inikaresorts.com</a>
-            </div>
+          <!-- GRSSL LINK FIXED TO RED -->
+          <div class="website">
+            <a href="https://www.grssl.com" target="_blank">www.grssl.com</a>
+          </div>
+        </div>
 
-            <!-- DALFIN RIGHT -->
-            <div class="brand-box">
-                <img src="Dalfin pic.png" class="brand-logo">
-                <a href="https://www.grssl.com/products" class="brand-link">www.grssl.com/products</a>
-            </div>
+        <div class="services">
+          Application Services | AI Solutions | BPMS | Hospitality
+        </div>
+
+      </div>
+
+      <!-- BACK SIDE -->
+      <div class="side back">
+
+        <div class="corporate-title">Corporate office</div>
+        <div class="company-name">Grassroots Solutions & Services Pvt Ltd</div>
+
+        <div class="address">
+          332/1, 1st Floor, Corporate Miller, Thimmaiah Road, Vasanth Nagar,<br>
+          Bengaluru - 560052 Karnataka, India
+        </div>
+
+        <div class="locations">
+          Bengaluru | Mysuru | Noida | Anantapur
+        </div>
+
+        <!-- UPDATED TWO-SIDE BRAND SECTION -->
+        <div class="brand-row">
+
+          <!-- LEFT: INIKA -->
+          <div class="brand-box">
+            <img src="https://raw.githubusercontent.com/Ryan0304-coder/business-card/main/Inika%20logo.jpg">
+            <a href="https://www.inikaresorts.com" target="_blank">www.inikaresorts.com</a>
+          </div>
+
+          <!-- RIGHT: DALFIN -->
+          <div class="brand-box">
+            <img src="https://raw.githubusercontent.com/Ryan0304-coder/business-card/main/Dalfin%20pic.png">
+            <a href="https://www.grssl.com/products" target="_blank">www.grssl.com/products</a>
+          </div>
 
         </div>
+
+      </div>
+
     </div>
-</div>
+  </div>
+
+  <script>
+    function flipCard() {
+      document.getElementById("flipCard").classList.toggle("flipped");
+    }
+  </script>
 
 </body>
 </html>
