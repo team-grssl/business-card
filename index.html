@@ -23,6 +23,11 @@
     overflow: hidden;
   }
 
+  /* Force single lines globally */
+  .single-line {
+    white-space: nowrap !important;
+  }
+
   /* Flip Wrapper */
   .flip-wrapper {
     width: 430px;
@@ -93,7 +98,7 @@
     font-weight: normal !important;
   }
 
-  /* Phone + Email (NOT bold, smaller) */
+  /* Phone + Email (NOT bold, smaller, single-line) */
   .phone a,
   .email a {
     color: #000 !important;
@@ -102,6 +107,7 @@
     padding: 3px 0;
     font-weight: normal !important;
     font-size: 13px;
+    white-space: nowrap !important;
   }
 
   /* GRSSL link RED */
@@ -109,6 +115,7 @@
     font-size: 16px;
     color: #e41e26 !important;
     text-decoration: none !important;
+    white-space: nowrap !important;
   }
 
   .logo-section {
@@ -119,22 +126,23 @@
   .logo {
     font-size: 42px;
     color: #e41e26;
+    white-space: nowrap !important;
   }
 
   .sub-logo {
     font-size: 13px;
     margin-top: 2px;
+    white-space: nowrap !important;
   }
 
   .services {
     margin-top: 28px;
     text-align: center;
     font-size: 15px;
+    white-space: nowrap !important;
   }
 
   /* BACK SECTION */
-
-  /* Corporate title stays bold */
   .corporate-title {
     text-align: center;
     font-size: 15px;
@@ -146,9 +154,9 @@
     font-size: 20px;
     margin-bottom: 8px;
     color: #e41e26;
+    white-space: nowrap !important;
   }
 
-  /* Address NOT bold + reduced */
   .address {
     text-align: center;
     font-size: 13px;
@@ -157,12 +165,12 @@
     font-weight: normal !important;
   }
 
-  /* Locations NOT bold + reduced */
   .locations {
     text-align: center;
     font-size: 13px;
     margin-bottom: 12px;
     font-weight: normal !important;
+    white-space: nowrap !important;
   }
 
   .inika {
@@ -170,12 +178,10 @@
     margin-bottom: 8px;
   }
 
-  /* Inika logo bigger */
   .inika img {
     height: 70px;
   }
 
-  /* Inika link RED + CENTERED */
   .inika-link {
     text-align: center;
     width: 100%;
@@ -185,6 +191,7 @@
     color: #e41e26 !important;
     text-decoration: none !important;
     font-size: 16px;
+    white-space: nowrap !important;
   }
 </style>
 
@@ -200,8 +207,8 @@
 
         <div class="top-section">
           <div class="left-side">
-            <div class="name">Abhijeet Paul</div>
-            <div class="designation">Head - CRM & AI Automation</div>
+            <div class="name single-line">Abhijeet Paul</div>
+            <div class="designation single-line">Head - CRM & AI Automation</div>
           </div>
 
           <div class="right-side">
@@ -211,15 +218,15 @@
         </div>
 
         <div class="logo-section">
-          <div class="logo">grassroots</div>
-          <div class="sub-logo">Solutions & Services Pvt. Ltd.</div>
+          <div class="logo single-line">grassroots</div>
+          <div class="sub-logo single-line">Solutions & Services Pvt. Ltd.</div>
 
           <div class="website">
             <a href="https://www.grssl.com" target="_blank">www.grssl.com</a>
           </div>
         </div>
 
-        <div class="services">
+        <div class="services single-line">
           Application Services | AI Solutions | BPMS | Hospitality
         </div>
 
@@ -237,7 +244,7 @@
           Bengaluru - 560052 Karnataka, India
         </div>
 
-        <div class="locations">
+        <div class="locations single-line">
           Bengaluru | Mysuru | Noida | Anantapur
         </div>
 
