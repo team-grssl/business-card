@@ -173,17 +173,18 @@
     justify-content: space-between;
   }
 
-  /* Default logo size */
-  .brand-box img {
-    height: 80px;
-    width: auto;
-    object-fit: contain;
-    margin: 0 auto;
-  }
+/* Default logo size */
+.brand-box img {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+  margin: 0 auto;
+  margin-top: auto; /* forces image to sit at the bottom */
+}
 
-  .dalfin-logo {
+/* Dalfin override — ONLY DALFIN is smaller */
+.dalfin-logo {
   height: 45px !important;
-  margin-top: -505px; /* FIX: lowers Dalfin to match Inika */
 }
 
   .brand-box a {
